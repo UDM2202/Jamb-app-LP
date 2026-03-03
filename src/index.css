@@ -44,7 +44,6 @@
   
   --animate-gradient: gradient 8s linear infinite;
   --animate-float: float 6s ease-in-out infinite;
-  --animate-shimmer: shimmer 2.5s linear infinite;
   
   @keyframes gradient {
     0%, 100% { background-size: 200% 200%; background-position: left center; }
@@ -54,11 +53,6 @@
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
-  }
-  
-  @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
   }
 }
 
@@ -87,7 +81,6 @@
   }
 }
 
-/* Custom utilities - Tailwind v4 way */
 @utility glass-effect {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -101,12 +94,6 @@
   border-radius: 1rem;
   padding: 1.5rem;
   transition: all 0.3s ease;
-}
-
-@utility glass-card-hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-5px);
 }
 
 @utility gradient-text {
@@ -129,16 +116,6 @@
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-  
-  @media (min-width: 640px) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  @media (min-width: 1024px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 }
 
 @utility btn-primary {
@@ -154,11 +131,6 @@
   overflow: hidden;
 }
 
-@utility btn-primary-hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.5);
-}
-
 @utility btn-secondary {
   padding: 0.75rem 2rem;
   background: transparent;
@@ -171,29 +143,6 @@
   backdrop-filter: blur(10px);
 }
 
-@utility btn-secondary-hover {
-  border-color: var(--color-primary-500);
-  transform: scale(1.05);
-}
-
-@utility shimmer {
-  position: relative;
-  overflow: hidden;
-}
-
-@utility shimmer-before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transform: translateX(-100%);
-  animation: shimmer 2.5s linear infinite;
-}
-
-/* Custom components using @layer */
 @layer components {
   .section-title {
     font-size: clamp(2rem, 5vw, 3rem);

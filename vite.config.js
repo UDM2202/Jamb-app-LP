@@ -6,7 +6,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(), // Tailwind v4 plugin
+    tailwindcss(),
   ],
   resolve: {
     alias: {
@@ -15,7 +15,6 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@utils': path.resolve(__dirname, './src/utils'),
       '@assets': path.resolve(__dirname, './src/assets'),
-      '@styles': path.resolve(__dirname, './src/styles'),
       '@layouts': path.resolve(__dirname, './src/layouts'),
       '@sections': path.resolve(__dirname, './src/sections'),
     },
@@ -26,13 +25,14 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    minify: 'terser',
+    minify: 'esbuild', 
     sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
           animations: ['framer-motion'],
+          icons: ['lucide-react'],
         },
       },
     },
