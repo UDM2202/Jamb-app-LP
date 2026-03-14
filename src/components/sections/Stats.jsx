@@ -7,7 +7,7 @@ const stats = [
   { value: 15000, label: 'Practice Questions', suffix: '+' },
   { value: 50000, label: 'Active Students', suffix: '+' },
   { value: 95, label: 'Success Rate', suffix: '%' },
-  { value: 24, label: 'Subjects Covered', suffix: '' },
+  { value: 12, label: 'Subjects Covered', suffix: '' },
 ];
 
 const Stats = () => {

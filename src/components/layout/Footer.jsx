@@ -62,10 +62,10 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <a href="/" className="text-2xl font-display font-bold inline-block mb-4">
-              <span className="gradient-text">JAMB Master</span>
+              <span className="gradient-text">Prep X</span>
             </a>
             <p className="text-gray-400 text-sm mb-4">
-              Empowering Nigerian students to ace JAMB with smart, accessible, and effective exam preparation tools.
+              Empowering Nigerian students to ace exams with smart, accessible, and effective preparation tools.
             </p>
             
             {/* Social Links */}
@@ -163,7 +163,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex items-center gap-3 text-gray-400">
               <Mail size={18} className="text-primary-500" />
-              <span className="text-sm">support@jambmaster.com</span>
+              <span className="text-sm">support@prep-x.com</span>
             </div>
             <div className="flex items-center gap-3 text-gray-400">
               <Phone size={18} className="text-primary-500" />
@@ -179,7 +179,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
-            © {currentYear} JAMB Master. All rights reserved.
+            © {currentYear} Prep X. All rights reserved.
           </p>
           
           {/* App Store Badges */}

@@ -70,7 +70,7 @@ const Features = () => {
             <span className="gradient-text">Succeed</span>
           </h2>
           <p className="section-subtitle">
-            Comprehensive features designed to help you master JAMB and achieve your dream score
+            Comprehensive features designed to help you master exams and achieve your dream score
           </p>
         </motion.div>
 

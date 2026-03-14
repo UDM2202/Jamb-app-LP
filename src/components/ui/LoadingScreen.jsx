@@ -17,7 +17,7 @@ const LoadingScreen = () => {
           className="text-4xl md:text-5xl font-display font-bold mb-6"
         >
           <span className="bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient">
-            JAMB Master
+            Prep X
           </span>
         </motion.h1>
         

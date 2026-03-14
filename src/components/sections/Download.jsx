@@ -45,11 +45,11 @@ const Download = () => {
           </span>
           <h2 className="section-title">
             Download{' '}
-            <span className="gradient-text">JAMB Master</span>
+            <span className="gradient-text">Prep X</span>
             {' '}Now
           </h2>
           <p className="section-subtitle">
-            Available on iOS and Android. Start your journey to JAMB success today.
+            Available on iOS and Android. Start your journey to exam success today.
           </p>
         </motion.div>
 
@@ -78,11 +78,11 @@ const Download = () => {
             </div>
 
             <h3 className="text-2xl font-display font-bold mb-4">
-              Your Complete JAMB Preparation Partner
+              Your Complete Exam Preparation Partner
             </h3>
             
             <p className="text-gray-400 mb-6">
-              Join thousands of successful students who have used JAMB Master to achieve their dream scores. Get instant access to thousands of practice questions, detailed solutions, and smart learning features.
+              Join thousands of successful students who have used Prep X to achieve their dream scores. Get instant access to thousands of practice questions, detailed solutions, and smart learning features.
             </p>
 
             {/* Feature List */}

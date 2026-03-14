@@ -14,7 +14,7 @@ const steps = [
   {
     icon: <Download className="w-6 h-6" />,
     title: 'Download the App',
-    description: 'Get JAMB Master from Google Play Store or Apple App Store for free.',
+    description: 'Get Prep X from Google Play Store or Apple App Store for free.',
     color: 'from-primary-500 to-secondary-500'
   },
   {
@@ -26,7 +26,7 @@ const steps = [
   {
     icon: <BookOpen className="w-6 h-6" />,
     title: 'Choose Subjects',
-    description: 'Select the JAMB subjects you want to focus on and start practicing.',
+    description: 'Select the subjects you want to focus on and start practicing.',
     color: 'from-accent-500 to-primary-500'
   },
   {
@@ -44,7 +44,7 @@ const steps = [
   {
     icon: <Award className="w-6 h-6" />,
     title: 'Ace Your Exam',
-    description: 'Build confidence and master JAMB with consistent practice.',
+    description: 'Build confidence and master exams with consistent practice.',
     color: 'from-accent-500 to-secondary-500'
   }
 ];
@@ -71,11 +71,11 @@ const HowItWorks = () => {
           </span>
           <h2 className="section-title">
             How{' '}
-            <span className="gradient-text">JAMB Master</span>
+            <span className="gradient-text">Prep X</span>
             {' '}Works
           </h2>
           <p className="section-subtitle">
-            Get started in minutes and follow these simple steps to master JAMB
+            Get started in minutes and follow these simple steps to master exams
           </p>
         </motion.div>
 
@@ -127,7 +127,7 @@ const HowItWorks = () => {
         </div>
 
         {/* Video Demo Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -138,10 +138,10 @@ const HowItWorks = () => {
           <div className="relative z-10 flex flex-col lg:flex-row items-center gap-8">
             <div className="flex-1">
               <h3 className="text-2xl font-display font-bold mb-3">
-                Watch How Students Are Acing JAMB
+                Watch How Students Are Acing exams with Prep X
               </h3>
               <p className="text-gray-400 mb-4">
-                See how JAMB Master has helped thousands of students improve their scores
+                See how Prep X has helped thousands of students improve their scores
               </p>
               <button className="btn-primary group">
                 Watch Demo Video
@@ -157,7 +157,7 @@ const HowItWorks = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

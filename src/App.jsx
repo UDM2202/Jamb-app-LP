@@ -7,7 +7,7 @@ import Features from './components/sections/Features';
 import Subjects from './components/sections/Subjects';
 import HowItWorks from './components/sections/HowItWorks';
 import Stats from './components/sections/Stats';
-import Testimonials from './components/sections/Testimonials';
+// import Testimonials from './components/sections/Testimonials';
 import Download from './components/sections/Download';
 import FAQ from './components/sections/FAQ';
 import Footer from './components/layout/Footer';
@@ -31,14 +31,14 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>JAMB Master - Ace Your JAMB Examination</title>
-        <meta name="description" content="Master JAMB with thousands of practice questions, detailed solutions, and personalized learning paths for Science, Art, and Commercial students." />
-        <meta name="keywords" content="JAMB, UTME, exam preparation, practice questions, Nigeria, education" />
-        <meta property="og:title" content="JAMB Master" />
-        <meta property="og:description" content="The smartest way to prepare for JAMB" />
+        <title>Prep X - Ace Your Examination</title>
+        <meta name="description" content="Master examinatons with thousands of practice questions, detailed solutions, and personalized learning paths for Science, Art, and Commercial students." />
+        <meta name="keywords" content="JAMB UTME, exam preparation, practice questions, Nigeria, education" />
+        <meta property="og:title" content="Prep X" />
+        <meta property="og:description" content="The smartest way to prepare for exams" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://jambmaster.com" />
+        <link rel="canonical" href="https://prep-x.com" />
       </Helmet>
 
       
@@ -63,7 +63,7 @@ function App() {
         <Features />
         <Subjects />
         <HowItWorks />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Download />
         <FAQ />
       </main>

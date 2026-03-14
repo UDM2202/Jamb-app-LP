@@ -44,7 +44,7 @@ const Hero = () => {
               variants={itemVariants}
               className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6"
             >
-              Master JAMB with{' '}
+              Master exams with{' '}
               <span className="gradient-text">AI-Powered</span>
               <br />
               Learning
@@ -54,7 +54,7 @@ const Hero = () => {
               variants={itemVariants}
               className="text-lg text-gray-400 mb-8 max-w-lg"
             >
-              Access 15,000+ JAMB questions with detailed solutions, organized by subject, topic, and department. Join 50,000+ students already preparing smarter.
+              Access 15,000+  questions with detailed solutions, organized by subject, topic, and department. Join 50,000+ students already preparing smarter.
             </motion.p>
 
             <motion.div 
@@ -65,10 +65,10 @@ const Hero = () => {
                 Start Learning Free
                 <ArrowRight className="inline ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </button>
-              <button className="btn-secondary group">
+              {/* <button className="btn-secondary group">
                 <Play className="inline mr-2" size={20} />
                 Watch Demo
-              </button>
+              </button> */}
             </motion.div>
 
             <motion.div 
@@ -81,7 +81,7 @@ const Hero = () => {
               </div>
               <div className="w-px h-8 bg-white/10" />
               <div>
-                <h3 className="text-3xl font-display font-bold gradient-text">50k+</h3>
+                <h3 className="text-3xl font-display font-bold gradient-text">100k+</h3>
                 <p className="text-sm text-gray-400">Students</p>
               </div>
               <div className="w-px h-8 bg-white/10" />
@@ -92,7 +92,7 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right Content - App Preview */}
+          {/* Right Content - App Preview with ENGLISH question */}
           <motion.div
             variants={itemVariants}
             className="relative"
@@ -102,20 +102,29 @@ const Hero = () => {
               <div className="glass-card p-4 floating">
                 <div className="bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-lg p-4">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg" />
+                    <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center text-white font-bold">
+                      EN
+                    </div>
                     <div>
                       <h4 className="font-display font-bold">Today's Practice</h4>
-                      <p className="text-sm text-gray-400">Physics • 10 questions</p>
+                      <p className="text-sm text-gray-400">English • 10 questions</p>
                     </div>
                   </div>
                   
-                  {/* Sample Question */}
+                  {/* Sample English Language Question */}
                   <div className="bg-white/5 rounded-lg p-4 mb-3">
-                    <p className="text-sm mb-3">A body of mass 5kg is acted upon by a force of 20N. What is the acceleration?</p>
+                    <p className="text-sm mb-3">Choose the option that best completes the gap:</p>
+                    <p className="text-sm font-medium mb-3">"The principal, together with his staff, _____ present at the assembly."</p>
                     <div className="grid grid-cols-2 gap-2">
-                      {['2 m/s²', '4 m/s²', '5 m/s²', '10 m/s²'].map((option, i) => (
-                        <div key={i} className="bg-white/5 rounded p-2 text-sm hover:bg-primary-500/20 cursor-pointer transition">
-                          {option}
+                      {[
+                        { text: 'were', label: 'A' },
+                        { text: 'are', label: 'B' },
+                        { text: 'was', label: 'C' },
+                        { text: 'have been', label: 'D' }
+                      ].map((option, i) => (
+                        <div key={i} className="bg-white/5 rounded p-2 text-sm hover:bg-primary-500/20 cursor-pointer transition flex items-center gap-2">
+                          <span className="text-xs text-primary-400 font-bold">{option.label}.</span>
+                          <span>{option.text}</span>
                         </div>
                       ))}
                     </div>

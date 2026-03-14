@@ -18,7 +18,7 @@ const Navbar = () => {
     { name: 'Features', href: '#features' },
     { name: 'Subjects', href: '#subjects' },
     { name: 'How it Works', href: '#how-it-works' },
-    { name: 'Testimonials', href: '#testimonials' },
+    // { name: 'Testimonials', href: '#testimonials' },
     { name: 'FAQ', href: '#faq' },
   ];
 
@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="/" className="text-2xl font-display font-bold">
-            <span className="gradient-text">JAMB Master</span>
+            <span className="gradient-text">Prep X</span>
           </a>
 
           {/* Desktop Navigation */}
