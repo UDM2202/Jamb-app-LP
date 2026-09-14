@@ -31,14 +31,14 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Prep X - Ace Your Examination</title>
+        <title>Prep J - Ace Your Examination</title>
         <meta name="description" content="Master examinatons with thousands of practice questions, detailed solutions, and personalized learning paths for Science, Art, and Commercial students." />
         <meta name="keywords" content="JAMB UTME, exam preparation, practice questions, Nigeria, education" />
-        <meta property="og:title" content="Prep X" />
+        <meta property="og:title" content="Prep J" />
         <meta property="og:description" content="The smartest way to prepare for exams" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://prep-x.com" />
+        <link rel="canonical" href="https://jamb-app-lp.vercel.app/" />
       </Helmet>
 
       
