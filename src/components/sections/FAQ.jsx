@@ -5,13 +5,13 @@ import { ChevronDown, HelpCircle, Mail } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'Is Prep X really free?',
-    answer: 'Yes! Prep X is completely free to download. We offer thousands of practice questions and detailed solutions at no cost. We also have a premium version with additional features for students who want extra practice.',
+    question: 'Is Prep J really free?',
+    answer: 'Yes! Prep J is completely free to download. We offer thousands of practice questions and detailed solutions at no cost. We also have a premium version with additional features for students who want extra practice.',
     category: 'general'
   },
   {
     question: 'How many questions are available?',
-    answer: 'We currently have over 15,000 exam-style questions across all subjects. This includes questions from past exams and carefully crafted practice questions that follow the Prep X syllabus and pattern.',
+    answer: 'We currently have over 15,000 exam-style questions across all subjects. This includes questions from past exams and carefully crafted practice questions that follow the Prep J syllabus and pattern.',
     category: 'general'
   },
   {
@@ -85,7 +85,7 @@ const FAQ = () => {
             <span className="gradient-text">Questions</span>
           </h2>
           <p className="section-subtitle">
-            Find answers to common questions about Prep X
+            Find answers to common questions about Prep J
           </p>
         </motion.div>
 

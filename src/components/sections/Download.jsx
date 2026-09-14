@@ -45,7 +45,7 @@ const Download = () => {
           </span>
           <h2 className="section-title">
             Download{' '}
-            <span className="gradient-text">Prep X</span>
+            <span className="gradient-text">Prep J</span>
             {' '}Now
           </h2>
           <p className="section-subtitle">
@@ -82,7 +82,7 @@ const Download = () => {
             </h3>
             
             <p className="text-gray-400 mb-6">
-              Join thousands of successful students who have used Prep X to achieve their dream scores. Get instant access to thousands of practice questions, detailed solutions, and smart learning features.
+              Join thousands of successful students who have used Prep J to achieve their dream scores. Get instant access to thousands of practice questions, detailed solutions, and smart learning features.
             </p>
 
             {/* Feature List */}

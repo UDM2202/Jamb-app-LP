@@ -62,7 +62,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <a href="/" className="text-2xl font-display font-bold inline-block mb-4">
-              <span className="gradient-text">Prep X</span>
+              <span className="gradient-text">Prep J</span>
             </a>
             <p className="text-gray-400 text-sm mb-4">
               Empowering Nigerian students to ace exams with smart, accessible, and effective preparation tools.
@@ -179,7 +179,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
-            © {currentYear} Prep X. All rights reserved.
+            © {currentYear} J. All rights reserved.
           </p>
           
           {/* App Store Badges */}

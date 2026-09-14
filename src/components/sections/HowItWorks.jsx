@@ -14,7 +14,7 @@ const steps = [
   {
     icon: <Download className="w-6 h-6" />,
     title: 'Download the App',
-    description: 'Get Prep X from Google Play Store or Apple App Store for free.',
+    description: 'Get Prep J from Google Play Store or Apple App Store for free.',
     color: 'from-primary-500 to-secondary-500'
   },
   {
@@ -71,7 +71,7 @@ const HowItWorks = () => {
           </span>
           <h2 className="section-title">
             How{' '}
-            <span className="gradient-text">Prep X</span>
+            <span className="gradient-text">Prep J</span>
             {' '}Works
           </h2>
           <p className="section-subtitle">
