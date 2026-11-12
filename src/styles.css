@@ -46,21 +46,21 @@
 
 @layer tokens {
   :root {
-    --paper: #f3f0e8;
-    --paper-2: #ebe7dc;
-    --surface: #fbfaf6;
-    --ink: #15191d;
-    --ink-2: #454b52;
-    --ink-3: #6d737a;
-    --rule: #15191d24;
-    --rule-strong: #15191d;
-    --accent: #b8431f;
+    --paper: #ffffff;
+    --paper-2: #eef2f8;
+    --surface: #f6f8fc;
+    --ink: #171e3a;
+    --ink-2: #454c63;
+    --ink-3: #6b7186;
+    --rule: #171e3a24;
+    --rule-strong: #171e3a;
+    --accent: #0562c7;
     --accent-ink: #ffffff;
-    --band: #12161a;
-    --band-ink: #ece8de;
-    --band-ink-2: #a9aeb3;
-    --band-rule: #ece8de2b;
-    --band-accent: #e9774f;
+    --band: #121a36;
+    --band-ink: #eef2fa;
+    --band-ink-2: #a9b2c9;
+    --band-rule: #eef2fa2b;
+    --band-accent: #6aaef5;
 
     --serif: 'Source Serif 4 Variable', 'Source Serif 4', Georgia, 'Times New Roman', serif;
     --sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -73,17 +73,17 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --paper: #101316;
-      --paper-2: #161a1e;
-      --surface: #171b20;
-      --ink: #ece8de;
-      --ink-2: #b9bcbf;
-      --ink-3: #8b9096;
-      --rule: #ece8de26;
-      --rule-strong: #ece8de;
-      --accent: #e9774f;
-      --accent-ink: #14100d;
-      --band: #1a1f24;
+      --paper: #0b1124;
+      --paper-2: #111a33;
+      --surface: #121b36;
+      --ink: #e9eefa;
+      --ink-2: #b4bcd0;
+      --ink-3: #8690a8;
+      --rule: #e9eefa26;
+      --rule-strong: #e9eefa;
+      --accent: #5ea6f2;
+      --accent-ink: #07101f;
+      --band: #121b36;
     }
   }
 }
@@ -239,7 +239,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 4rem;
+    min-height: 4.5rem;
   }
   .brand {
     display: inline-flex;
@@ -248,17 +248,24 @@
     text-decoration: none;
   }
   .brand__mark {
-    width: 1.55rem;
-    height: 1.55rem;
-  }
-  .brand__cell {
-    fill: var(--accent);
+    width: auto;
+    height: 2.6rem;
   }
   .brand__name {
-    font-family: var(--sans);
+    display: grid;
+    line-height: 1.15;
+    text-transform: uppercase;
+  }
+  .brand__name strong {
     font-weight: 600;
-    font-size: 1.12rem;
-    letter-spacing: 0.16em;
+    font-size: 0.98rem;
+    letter-spacing: 0.06em;
+  }
+  .brand__name span {
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--ink-3);
   }
 
   .nav__toggle {

@@ -24,6 +24,7 @@ npm run preview  # serve the production build
 | `src/beam.js` | The interactive beam figure in the hero |
 | `src/main.js` | Navigation, enquiry form, font loading |
 | `src/site.config.js` | The enquiry email address |
+| `public/asgt-mark.png` | Logo mark, also used as the favicon |
 | `public/work/` | Product screenshots in WebP at two widths |
 | `vercel.json` | Security headers and asset caching |
 
