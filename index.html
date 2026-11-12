@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASGT | Advanced Systems Global Technology</title>
+    <meta
+      name="description"
+      content="ASGT designs, builds and secures software systems. Engineering platforms, AI products, client projects and cybersecurity services from Lagos, Nigeria."
+    />
+    <meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#101316" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ASGT" />
+    <meta property="og:title" content="ASGT | Advanced Systems Global Technology" />
+    <meta
+      property="og:description"
+      content="We design, build and secure software systems. Our own products run in production and we take on selected client work."
+    />
+    <meta property="og:image" content="/work/structai-beam-1600.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Advanced Systems Global Technology",
+        "alternateName": "ASGT",
+        "description": "Software engineering, AI systems and cybersecurity services.",
+        "address": { "@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG" },
+        "knowsAbout": ["Software engineering", "Structural engineering software", "Education technology", "Cybersecurity"]
+      }
+    </script>
+
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="masthead" id="top">
+      <div class="wrap masthead__row">
+        <a class="brand" href="#top" aria-label="ASGT, home">
+          <svg class="brand__mark" viewBox="0 0 28 28" aria-hidden="true">
+            <rect x="1" y="1" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M14 1v26M1 14h26" stroke="currentColor" stroke-width="2" />
+            <rect class="brand__cell" x="15" y="2" width="11" height="11" />
+          </svg>
+          <span class="brand__name">ASGT</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
+          <ul class="nav__list" id="nav-list">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#capabilities">Capabilities</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#engagement">Working with us</a></li>
+            <li><a class="nav__cta" href="#contact">Start a project</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <p class="eyebrow">Advanced Systems Global Technology</p>
+          <h1 id="hero-title">Technology engineered to carry real load.</h1>
+          <p class="lede">
+            ASGT designs, builds and secures software systems. We run our own products in production,
+            and we take on selected work for organisations that need the same standard of engineering.
+          </p>
+          <div class="actions">
+            <a class="btn btn--solid" href="#contact">Start a project</a>
+            <a class="btn btn--line" href="#work">See the work</a>
+          </div>
+        </div>
+
+        <figure class="sheet" aria-labelledby="beam-caption">
+          <div class="sheet__head">
+            <span>FIG. 01</span>
+            <span>Two span continuous beam, moving point load</span>
+          </div>
+          <svg id="beam" class="beam" viewBox="0 0 560 362" role="img" aria-label="Bending moment and shear force diagrams for a two span continuous beam. Use the slider below to move the load.">
+            <g class="beam__grid" aria-hidden="true">
+              <path d="M40 24V352M160 24V352M280 24V352M400 24V352M520 24V352" />
+            </g>
+
+            <g class="beam__load">
+              <path id="beam-arrow" d="M0 30V86M-6 76L0 88L6 76" />
+              <text id="beam-load-label" y="24" text-anchor="middle">P = 100 kN</text>
+            </g>
+
+            <path class="beam__member" d="M40 96H520" />
+            <g class="beam__supports">
+              <path d="M40 99l-9 15h18z" />
+              <path d="M280 99l-9 15h18z" />
+              <path d="M520 99l-9 15h18z" />
+              <path d="M26 118h28M266 118h28M506 118h28" />
+              <text x="40" y="134" text-anchor="middle">A</text>
+              <text x="280" y="134" text-anchor="middle">B</text>
+              <text x="520" y="134" text-anchor="middle">C</text>
+            </g>
+
+            <text class="beam__title" x="40" y="160">BENDING MOMENT, kNm</text>
+            <path class="beam__base" d="M40 204H520" />
+            <path id="beam-bmd" class="beam__area" d="" />
+            <text id="beam-m-span" class="beam__val" text-anchor="middle"></text>
+            <text id="beam-m-sup" class="beam__val" text-anchor="middle"></text>
+
+            <text class="beam__title" x="40" y="276">SHEAR FORCE, kN</text>
+            <path class="beam__base" d="M40 320H520" />
+            <path id="beam-sfd" class="beam__area beam__area--alt" d="" />
+          </svg>
+
+          <div class="sheet__control">
+            <label for="beam-pos">Load position</label>
+            <input id="beam-pos" type="range" min="0" max="12" step="0.05" value="2.6" />
+            <output id="beam-pos-out" for="beam-pos">2.60 m</output>
+          </div>
+
+          <dl class="readout">
+            <div><dt>R<sub>A</sub></dt><dd id="r-a">0</dd></div>
+            <div><dt>R<sub>B</sub></dt><dd id="r-b">0</dd></div>
+            <div><dt>R<sub>C</sub></dt><dd id="r-c">0</dd></div>
+            <div><dt>M<sub>span</sub></dt><dd id="m-span">0</dd></div>
+            <div><dt>M<sub>B</sub></dt><dd id="m-b">0</dd></div>
+          </dl>
+
+          <figcaption id="beam-caption">
+            Solved in your browser from the three moment equation, spans of 6 m. The same mechanics, at
+            full depth, run inside our structural design platform.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Title block -->
+      <section class="wrap" aria-label="Company summary">
+        <dl class="titleblock">
+          <div>
+            <dt>Firm</dt>
+            <dd>Advanced Systems Global Technology</dd>
+          </div>
+          <div>
+            <dt>Disciplines</dt>
+            <dd>Software, AI systems, cybersecurity</dd>
+          </div>
+          <div>
+            <dt>Base</dt>
+            <dd>Lagos, Nigeria. Working with clients anywhere.</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd><span class="dot" aria-hidden="true"></span>Accepting client work</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- About -->
+      <section class="section wrap" aria-labelledby="about-title">
+        <header class="section__head">
+          <p class="index">00</p>
+          <h2 id="about-title">A technology company that builds answers, then stands behind them.</h2>
+        </header>
+        <div class="prose prose--cols">
+          <p>
+            ASGT exists to solve problems with technology. Some of those problems are our own choosing: an
+            engineer who should not have to trust a calculation they cannot inspect, a student who deserves
+            better preparation than a photocopied booklet. Others arrive from clients, with a deadline and a
+            budget attached.
+          </p>
+          <p>
+            In both cases the method is the same. We learn the domain properly, we write the hard part
+            ourselves, and we ship something a professional can rely on. The products below are ours. We
+            designed them, built them and operate them, which is the most honest reference a software
+            company can offer.
+          </p>
+        </div>
+      </section>
+
+      <!-- Work -->
+      <section class="section wrap" id="work" aria-labelledby="work-title">
+        <header class="section__head">
+          <p class="index">01</p>
+          <h2 id="work-title">Selected work</h2>
+          <p class="section__note">Two products we conceived, engineered and run today.</p>
+        </header>
+
+        <!-- StructAI -->
+        <article class="case" aria-labelledby="case-structai">
+          <aside class="case__meta">
+            <p class="case__no">Project 01</p>
+            <h3 id="case-structai">StructAI</h3>
+            <p class="case__kind">Structural design platform for reinforced concrete</p>
+            <dl class="facts">
+              <div><dt>Sector</dt><dd>Civil and structural engineering</dd></div>
+              <div><dt>Our role</dt><dd>Product design, analysis engine, web platform, operations</dd></div>
+              <div><dt>Design basis</dt><dd>EN 1992-1-1 (Eurocode 2) with the UK National Annex</dd></div>
+              <div><dt>Stack</dt><dd>React, Vite, Tailwind CSS, Python, FastAPI, Pydantic, NumPy, Plotly</dd></div>
+            </dl>
+            <a class="visit" href="https://www.spheredesignhub.com" rel="noopener" target="_blank">
+              spheredesignhub.com <span aria-hidden="true">&#8599;</span>
+            </a>
+          </aside>
+
+          <div class="case__body">
+            <figure class="shot shot--lead">
+              <div class="shot__bar"><span>spheredesignhub.com</span><span>Continuous beam input</span></div>
+              <img
+                src="/work/structai-beam-1600.webp"
+                srcset="/work/structai-beam-800.webp 800w, /work/structai-beam-1600.webp 1600w"
+                sizes="(min-width: 1100px) 760px, 94vw"
+                width="1600" height="1000" loading="lazy" decoding="async"
+                alt="StructAI continuous beam screen showing span arrangement, support conditions, a beam elevation preview and a reinforced cross section."
+              />
+            </figure>
+
+            <div class="prose">
+              <h4>The problem</h4>
+              <p>
+                Concrete design in practice is still spread across spreadsheets, hand calculations and desktop
+                packages that return an answer without showing how it was reached. That is a real difficulty
+                for the engineer who has to sign the drawing, and a larger one for the engineer who has to
+                check it. A result is only useful if the working behind it can be read, challenged and
+                defended.
+              </p>
+
+              <h4>What we built</h4>
+              <p>
+                StructAI is a browser based design environment for reinforced concrete elements. An engineer
+                describes the member, its loads and its support conditions, and receives a complete design:
+                analysis, section sizing, reinforcement, serviceability checks and a calculation report that
+                cites the governing Eurocode clause for every step. Nothing is installed and nothing is hidden.
+              </p>
+              <p>The platform currently covers nine design modules:</p>
+              <ul class="tags" aria-label="Design modules">
+                <li>One way slabs</li>
+                <li>Two way slabs</li>
+                <li>Continuous slabs</li>
+                <li>Simply supported beams</li>
+                <li>Continuous beams</li>
+                <li>Columns</li>
+                <li>Pad footings</li>
+                <li>Combined footings</li>
+                <li>Staircases</li>
+              </ul>
+            </div>
+
+            <div class="shots">
+              <figure class="shot">
+                <div class="shot__bar"><span>Two way slab</span></div>
+                <img
+                  src="/work/structai-slab-800.webp"
+                  srcset="/work/structai-slab-800.webp 800w, /work/structai-slab-1600.webp 1600w"
+                  sizes="(min-width: 1100px) 370px, (min-width: 640px) 46vw, 94vw"
+                  width="1600" height="1000" loading="lazy" decoding="async"
+                  alt="Two way slab input with nine edge continuity cases, a three dimensional slab preview and a plan view."
+                />
+                <figcaption>Slab behaviour and all nine edge continuity cases, with live geometry previews.</figcaption>
+              </figure>
+              <figure class="shot">
+                <div class="shot__bar"><span>Pad footing</span></div>
+                <img
+                  src="/work/structai-foundation-800.webp"
+                  srcset="/work/structai-foundation-800.webp 800w, /work/structai-foundation-1600.webp 1600w"
+                  sizes="(min-width: 1100px) 370px, (min-width: 640px) 46vw, 94vw"
+                  width="1600" height="1000" loading="lazy" decoding="async"
+                  alt="Pad footing input showing column details, footing geometry, a live footing plan and an input summary."
+                />
+                <figcaption>Foundation design with a plan that redraws as the engineer types.</figcaption>
+              </figure>
+            </div>
+
+            <div class="prose">
+              <h4>Inside the engine</h4>
+              <p>
+                The analysis and design engine is our own work, written in Python and exposed through a typed
+                API. It runs to more than eight thousand lines of solver and code checking logic, and it was
+                developed against worked examples and the corrections of practising engineers.
+              </p>
+              <ul class="points">
+                <li>
+                  <strong>Analysis.</strong> Continuous members are solved with a linear elastic finite element
+                  model and a banded symmetric solver, with pattern loading applied automatically. The report
+                  exposes the analysis internals so a checker can follow the moments back to the stiffness
+                  model.
+                </li>
+                <li>
+                  <strong>Columns.</strong> Braced and unbraced members, slenderness and second order effects,
+                  biaxial bending, sub frame analysis, and load take down from tributary areas and floor
+                  loads when the axial force is not known in advance.
+                </li>
+                <li>
+                  <strong>Foundations.</strong> Pad footings and combined footings for any number of columns,
+                  including pedestals, eccentric columns, water table effects, bearing pressure and punching
+                  shear.
+                </li>
+                <li>
+                  <strong>Serviceability and detailing.</strong> Deflection, crack control, cover for exposure
+                  and fire, anchorage, and bar selection that respects the sizes the engineer prefers to use on
+                  site.
+                </li>
+                <li>
+                  <strong>Cost and alternatives.</strong> Each design is priced from a regional rates database
+                  (United Kingdom and Nigeria today) and presented beside alternative sections, so the trade
+                  between depth, steel and cost is visible before a decision is made.
+                </li>
+              </ul>
+
+              <h4>Decisions that mattered</h4>
+              <p>
+                <strong>The engineer's input is law.</strong> If a user fixes the cover, the effective depth or
+                the bar diameter, the engine designs around that choice and says so in the report. It never
+                substitutes a value quietly. This sounds obvious and is routinely violated by design software.
+              </p>
+              <p>
+                <strong>Capacity is checked twice.</strong> Section moment capacity is computed with the
+                rectangular stress block, then verified by an independent routine that integrates the parabola
+                rectangle law across four hundred layers. Two different stress models, two different
+                integrations, one answer. Contract tests hold the interface and the engine to the same schema
+                so a change on one side cannot silently break the other.
+              </p>
+              <p>
+                <strong>The report is the product.</strong> Every design exports a calculation document with a
+                cover page, clause references, shear force and bending moment diagrams, deflection plots and
+                reinforcement details, in PDF and CSV. It is written to be submitted, not just read on screen.
+              </p>
+
+              <h4>Around the calculation</h4>
+              <p>
+                Engineering is done by teams, so the platform includes organisations, workspaces, projects,
+                role based permissions, comments on designs and project chat. A quick design mode serves the
+                engineer who needs one element checked in five minutes, and a companion desktop agent links
+                the platform to external design tools.
+              </p>
+            </div>
+
+            <figure class="shot">
+              <div class="shot__bar"><span>spheredesignhub.com</span><span>Dashboard</span></div>
+              <img
+                src="/work/structai-dashboard-1600.webp"
+                srcset="/work/structai-dashboard-800.webp 800w, /work/structai-dashboard-1600.webp 1600w"
+                sizes="(min-width: 1100px) 760px, 94vw"
+                width="1600" height="1000" loading="lazy" decoding="async"
+                alt="StructAI dashboard with project totals, an activity overview and recent projects."
+              />
+              <figcaption>Projects, activity and saved designs for the whole practice.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <!-- PrepJ -->
+        <article class="case" aria-labelledby="case-prepj">
+          <aside class="case__meta">
+            <p class="case__no">Project 02</p>
+            <h3 id="case-prepj">PrepJ</h3>
+            <p class="case__kind">JAMB UTME preparation with past questions, timed mocks and an AI tutor</p>
+            <dl class="facts">
+              <div><dt>Sector</dt><dd>Education technology</dd></div>
+              <div><dt>Our role</dt><dd>Product, content structure, web application, AI tutor, operations</dd></div>
+              <div><dt>Audience</dt><dd>Nigerian university entrance candidates</dd></div>
+              <div><dt>Availability</dt><dd>Web app on any device. iOS and Android apps in development.</dd></div>
+            </dl>
+            <a class="visit" href="https://prepjasgt.com" rel="noopener" target="_blank">
+              prepjasgt.com <span aria-hidden="true">&#8599;</span>
+            </a>
+          </aside>
+
+          <div class="case__body">
+            <figure class="shot shot--lead">
+              <div class="shot__bar"><span>prepjasgt.com</span><span>Home</span></div>
+              <img
+                src="/work/prepj-home-1600.webp"
+                srcset="/work/prepj-home-800.webp 800w, /work/prepj-home-1600.webp 1600w"
+                sizes="(min-width: 1100px) 760px, 94vw"
+                width="1600" height="1000" loading="lazy" decoding="async"
+                alt="PrepJ home page with the headline Pass JAMB with past questions and an AI tutor, and a sample English practice question."
+              />
+            </figure>
+
+            <div class="prose">
+              <h4>The problem</h4>
+              <p>
+                Every year a very large number of Nigerian students sit the Unified Tertiary Matriculation
+                Examination, and a single score decides which university course is open to them. The exam is
+                computer based and strictly timed. Many candidates meet that format for the first time on the
+                day, having prepared from printed past papers that give an answer key and no explanation.
+              </p>
+
+              <h4>What we built</h4>
+              <p>
+                PrepJ puts the whole preparation in one place and makes it free to start. A candidate chooses
+                a department (Science, Art or Commercial), then Use of English and the three subjects in
+                their combination, and begins practising within minutes on whatever device they own.
+              </p>
+              <ul class="points">
+                <li>
+                  <strong>Past questions by year and topic.</strong> Questions are organised by subject,
+                  topic and exam year, so revision can be aimed at a weak area and not spread thin across a
+                  syllabus.
+                </li>
+                <li>
+                  <strong>Timed CBT mock exams.</strong> A mock reproduces the pace and layout of the real
+                  computer based test, then returns a score and the topics that cost the most marks.
+                </li>
+                <li>
+                  <strong>An explanation for every answer.</strong> The candidate sees why an option is
+                  correct, not only that it is.
+                </li>
+                <li>
+                  <strong>AI tutor.</strong> When an explanation is not enough, the student can ask the tutor
+                  to work through the idea again in plainer terms, at any hour.
+                </li>
+                <li>
+                  <strong>Progress, weak topics and rankings.</strong> Scores are tracked over time, weak
+                  topics are surfaced, and a ranking shows where a candidate stands among others preparing for
+                  the same paper.
+                </li>
+              </ul>
+            </div>
+
+            <div class="shots shots--mixed">
+              <figure class="shot">
+                <div class="shot__bar"><span>Features</span></div>
+                <img
+                  src="/work/prepj-features-800.webp"
+                  srcset="/work/prepj-features-800.webp 800w, /work/prepj-features-1600.webp 1600w"
+                  sizes="(min-width: 1100px) 500px, (min-width: 640px) 60vw, 94vw"
+                  width="1600" height="1000" loading="lazy" decoding="async"
+                  alt="PrepJ feature overview: past questions by year and topic, instant explanations, timed CBT mock exams, AI tutor, progress tracking and rankings."
+                />
+                <figcaption>One product for the whole preparation, from first question to mock exam.</figcaption>
+              </figure>
+              <figure class="shot shot--phone">
+                <img
+                  src="/work/prepj-mobile-390.webp"
+                  srcset="/work/prepj-mobile-390.webp 390w, /work/prepj-mobile-780.webp 780w"
+                  sizes="220px"
+                  width="780" height="1328" loading="lazy" decoding="async"
+                  alt="PrepJ home page on a phone."
+                />
+                <figcaption>Built for the phone first, because that is the device most candidates have.</figcaption>
+              </figure>
+            </div>
+
+            <div class="prose">
+              <h4>Decisions that mattered</h4>
+              <p>
+                <strong>The web came first.</strong> A student should not need storage space, a recent phone
+                or an app store account to begin. The web application works on any phone, tablet or computer
+                today, and the native apps follow from the same foundation.
+              </p>
+              <p>
+                <strong>Structure before volume.</strong> A question bank is only as useful as its indexing.
+                Every question carries its subject, topic and year, which is what makes targeted practice,
+                weak topic detection and honest progress reporting possible.
+              </p>
+              <p>
+                <strong>The tutor explains, it does not replace study.</strong> The AI tutor is placed after
+                the attempt, where it can address a specific misunderstanding. The student still does the
+                work, and that is the point.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Capabilities -->
+      <section class="section wrap" id="capabilities" aria-labelledby="cap-title">
+        <header class="section__head">
+          <p class="index">02</p>
+          <h2 id="cap-title">Capabilities</h2>
+          <p class="section__note">What we do for our own products is what we do for clients.</p>
+        </header>
+
+        <ol class="ledger">
+          <li>
+            <h3>Product engineering</h3>
+            <p>
+              Web and mobile applications designed, built and maintained from first sketch to production.
+              Clear interfaces, typed APIs, sound data models, and code another team can pick up.
+            </p>
+            <p class="ledger__out">Web apps, mobile apps, internal tools, customer portals</p>
+          </li>
+          <li>
+            <h3>AI and data systems</h3>
+            <p>
+              Language model features that earn their place: tutoring, document understanding, search,
+              recommendation and decision support, with evaluation and cost control built in from the start.
+            </p>
+            <p class="ledger__out">Assistants, retrieval, analytics, model evaluation</p>
+          </li>
+          <li>
+            <h3>Engineering and scientific software</h3>
+            <p>
+              Numerical work where the answer has consequences. Solvers, code compliance checking,
+              calculation reports and the verification that makes them trustworthy.
+            </p>
+            <p class="ledger__out">Analysis engines, design automation, technical reporting</p>
+          </li>
+          <li>
+            <h3>Cloud and platform</h3>
+            <p>
+              Deployment, observability and the unglamorous plumbing that keeps a system available. We size
+              infrastructure to the workload and document how to run it.
+            </p>
+            <p class="ledger__out">Architecture, CI and CD, monitoring, cost review</p>
+          </li>
+          <li>
+            <h3>Cybersecurity</h3>
+            <p>
+              Assessment, hardening and secure design for applications, networks and cloud estates. Security
+              is treated as an engineering discipline with evidence, not a checklist.
+            </p>
+            <p class="ledger__out"><a href="#security">See the security practice</a></p>
+          </li>
+          <li>
+            <h3>Integration and modernisation</h3>
+            <p>
+              Connecting systems that were never meant to meet, and moving ageing software to a foundation
+              that can be maintained, without stopping the business that depends on it.
+            </p>
+            <p class="ledger__out">APIs, data migration, legacy rescue, automation</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Security -->
+      <section class="band" id="security" aria-labelledby="sec-title">
+        <div class="wrap">
+          <header class="section__head">
+            <p class="index">03</p>
+            <h2 id="sec-title">Cybersecurity</h2>
+            <p class="section__note">Find the weakness before someone else does, then close it properly.</p>
+          </header>
+
+          <div class="band__grid">
+            <div class="prose">
+              <p>
+                We build software for a living, which shapes how we secure it. We know where developers cut
+                corners under deadline, how a session token ends up in a log file, and why the permission
+                check that exists on the page is missing from the API behind it. Our security work starts
+                from that knowledge.
+              </p>
+              <p>
+                Every engagement is agreed in writing before it starts: scope, method, testing window and
+                rules of engagement. Findings are reproduced, rated by real business impact and delivered
+                with a fix a developer can apply. Then we test again to confirm the fix holds.
+              </p>
+
+              <ol class="steps steps--stack" aria-label="How an assessment runs">
+                <li><span>Scope</span>Agree targets, limits and authorisation in writing.</li>
+                <li><span>Assess</span>Test manually and with tooling, as an attacker would.</li>
+                <li><span>Report</span>Deliver evidence, impact and a prioritised remedy for each finding.</li>
+                <li><span>Retest</span>Verify the fixes and record what was closed.</li>
+              </ol>
+            </div>
+
+            <ul class="services">
+              <li>
+                <h3>Penetration testing</h3>
+                <p>
+                  Web applications, mobile apps, APIs and networks tested against the ways they are actually
+                  attacked: broken access control, injection, authentication and session flaws, insecure
+                  configuration and business logic abuse.
+                </p>
+              </li>
+              <li>
+                <h3>Vulnerability assessment</h3>
+                <p>
+                  A structured sweep of your external and internal estate, with false positives removed and
+                  findings ordered by the risk they carry, so effort goes where it counts.
+                </p>
+              </li>
+              <li>
+                <h3>Secure code and architecture review</h3>
+                <p>
+                  We read the code and the design. Threat modelling, review of authentication, authorisation,
+                  secrets handling, cryptography and data flows, before launch or after an incident.
+                </p>
+              </li>
+              <li>
+                <h3>Cloud and infrastructure hardening</h3>
+                <p>
+                  Identity and access review, network segmentation, encryption, backup integrity, patching
+                  and logging, brought to a documented baseline your team can maintain.
+                </p>
+              </li>
+              <li>
+                <h3>Monitoring and incident readiness</h3>
+                <p>
+                  Logging that answers questions, alerting that is worth waking up for, and a response plan
+                  that has been rehearsed before it is needed.
+                </p>
+              </li>
+              <li>
+                <h3>Data protection and staff awareness</h3>
+                <p>
+                  Practical preparation for data protection obligations, including the Nigeria Data
+                  Protection Act, and training that teaches people to recognise phishing and social
+                  engineering in the form it really takes.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <p class="band__foot">
+            Security is also built into everything we ship. This site, for example, is served under a strict
+            content security policy, loads no third party scripts and sets no tracking cookies.
+          </p>
+        </div>
+      </section>
+
+      <!-- Engagement -->
+      <section class="section wrap" id="engagement" aria-labelledby="eng-title">
+        <header class="section__head">
+          <p class="index">04</p>
+          <h2 id="eng-title">Working with us</h2>
+          <p class="section__note">We take outside work. These are the ways it usually runs.</p>
+        </header>
+
+        <div class="models">
+          <article>
+            <h3>Fixed scope build</h3>
+            <p>
+              A defined product or feature, delivered for an agreed price against a written specification.
+              Suited to work with a clear boundary.
+            </p>
+          </article>
+          <article>
+            <h3>Dedicated team</h3>
+            <p>
+              Our engineers working as an extension of yours, month by month, on a roadmap you direct.
+              Suited to products that keep moving.
+            </p>
+          </article>
+          <article>
+            <h3>Audit and rescue</h3>
+            <p>
+              An independent review of a system that is late, unstable or insecure, followed by a plan and,
+              if you wish, the hands to carry it out.
+            </p>
+          </article>
+          <article>
+            <h3>Security engagement</h3>
+            <p>
+              A scoped assessment or a continuing retainer covering testing, review and advice as your
+              systems change.
+            </p>
+          </article>
+        </div>
+
+        <ol class="steps" aria-label="How a project runs">
+          <li><span>Brief</span>A conversation about the problem, the constraints and what success means.</li>
+          <li><span>Scoping note</span>A short written proposal: approach, timeline, cost and assumptions.</li>
+          <li><span>Build</span>Working software in regular increments that you can see and test.</li>
+          <li><span>Verify</span>Testing, security review and acceptance against the agreed scope.</li>
+          <li><span>Handover</span>Source code, documentation and support. What we build for you is yours.</li>
+        </ol>
+
+        <div class="principles">
+          <h3>How we hold ourselves to account</h3>
+          <ul>
+            <li><strong>We understand the domain first.</strong> Software written without it fails in ways no test will catch.</li>
+            <li><strong>We write things down.</strong> Scope, decisions and trade offs are recorded so nothing rests on memory.</li>
+            <li><strong>We verify.</strong> A result we cannot check is a result we do not ship.</li>
+            <li><strong>We say what we do not know.</strong> Early, plainly, and before it costs you anything.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section wrap contact" id="contact" aria-labelledby="contact-title">
+        <header class="section__head">
+          <p class="index">05</p>
+          <h2 id="contact-title">Tell us what you are trying to solve.</h2>
+          <p class="section__note">
+            A few lines are enough. We reply to every serious enquiry, usually within two working days.
+          </p>
+        </header>
+
+        <div class="contact__grid">
+          <form id="enquiry" class="form" novalidate>
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="f-org">Organisation <span class="opt">optional</span></label>
+              <input id="f-org" name="org" type="text" autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="f-kind">What do you need?</label>
+              <select id="f-kind" name="kind">
+                <option>A new product or application</option>
+                <option>Work on an existing system</option>
+                <option>AI or data project</option>
+                <option>Security assessment</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field field--wide">
+              <label for="f-msg">The problem, in your own words</label>
+              <textarea id="f-msg" name="message" rows="6" required></textarea>
+            </div>
+            <div class="form__foot">
+              <button class="btn btn--solid" type="submit">Compose email</button>
+              <p id="form-note" class="form__note" role="status">
+                This opens your email application with the message ready to send. Nothing is stored on this
+                site.
+              </p>
+            </div>
+          </form>
+
+          <address class="contact__direct">
+            <h3>Direct</h3>
+            <p><a id="mail-link" href="mailto:prepjasgt@gmail.com">prepjasgt@gmail.com</a></p>
+            <h3>Location</h3>
+            <p>Lagos, Nigeria</p>
+            <h3>Products</h3>
+            <p>
+              <a href="https://www.spheredesignhub.com" rel="noopener" target="_blank">StructAI</a><br />
+              <a href="https://prepjasgt.com" rel="noopener" target="_blank">PrepJ</a>
+            </p>
+          </address>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer__row">
+        <p class="footer__name">
+          <strong>ASGT</strong>
+          <span>Advanced Systems Global Technology</span>
+        </p>
+        <ul class="footer__nav">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#engagement">Working with us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="footer__legal">&copy; <span id="year">2026</span> Advanced Systems Global Technology. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
